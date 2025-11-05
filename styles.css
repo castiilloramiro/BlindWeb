@@ -1,4 +1,4 @@
-/* Variables y estilos base */
+
 :root {
     --primary-color: #00cc99;
     --secondary-color: #0e1f1b;
@@ -8,7 +8,7 @@
     --transition-speed: 0.3s;
 }
 
-/* Estilos base */
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -17,7 +17,8 @@ body {
     line-height: 1.6;
 }
 
-/* Skip link */
+
+
 .skip-link {
     position: absolute;
     top: -40px;
@@ -33,7 +34,7 @@ body {
     top: 0;
 }
 
-/* Header */
+
 header {
     background: linear-gradient(135deg, #004d3b, #003d33);
     color: #ffffff;
@@ -144,7 +145,7 @@ h3 {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Navegación */
+
 nav {
     margin-top: 2rem;
     display: flex;
@@ -218,7 +219,7 @@ nav a:hover {
     margin-left: 0.5rem;
 }
 
-/* Secciones principales */
+
 section {
     border-bottom: 1px solid #004d3b;
     margin-bottom: 4rem;
@@ -272,31 +273,26 @@ section p {
     border-radius: 1rem;
 }
 
-.sponsors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
+.sponsors { justify-content: center; }
+.sponsor-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
 
 .sponsor-logo {
-    width: 150px;
-    height: 100px;
-    background-color: #003d33;
-    color: #b0ffe3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #00cc99;
-    border-radius: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 150px;   /* ajustable */
+  height: 100px;  /* ajustable */
+  background-color: transparent;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto; border: none; border-radius: 1rem;
 }
 
-.sponsor-logo:hover {
-    transform: scale(1.05);
-    background-color: #005f46;
+.sponsor-logo img {
+  display: block;
+  max-width: 100%; max-height: 100%;
+  width: auto; height: auto;
+  object-fit: contain;
+  background: transparent;
+  margin: 0 auto;
 }
+
 
 footer {
     background-color: #002b1f;
@@ -307,7 +303,7 @@ footer {
     margin-top: 4rem;
 }
 
-/* Animación por JavaScript */
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -319,18 +315,18 @@ footer {
     transform: translateY(0);
 }
 
-/* Smooth scroll behavior */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Section hover effect */
+
 section:hover {
     background-color: rgba(0, 255, 180, 0.05);
     transition: background-color 0.3s ease;
 }
 
-/* Estilos para la sección de contacto */
+
 .contacto-container {
     max-width: 600px;
     margin: 0 auto;
@@ -485,7 +481,7 @@ section:hover {
     box-shadow: 0 4px 12px rgba(0, 204, 153, 0.3);
 }
 
-/* Estilos para la nueva galería */
+
 .galeria-filtros {
     display: flex;
     justify-content: center;
@@ -629,7 +625,7 @@ section:hover {
     color: #d2f4e3;
 }
 
-/* Media queries */
+
 @media (max-width: 768px) {
     .contacto-container {
         grid-template-columns: 1fr;
@@ -640,7 +636,7 @@ section:hover {
     }
 }
 
-/* Estilos para la galería */
+
 .galeria-carrusel {
     position: relative;
     max-width: 800px;
@@ -703,7 +699,7 @@ section:hover {
     }
 }
 
-/* Estilos para la sección del equipo */
+
 .equipo-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -744,6 +740,23 @@ section:hover {
     color: #00cc99;
     margin-bottom: 0.5rem;
 }
+
+.integrante .redes-sociales {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.integrante .redes-sociales a {
+    font-size: 1.4rem;
+    color: #aaffcc;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.integrante .redes-sociales a:hover {
+    color: #00cc99;
+    transform: translateY(-2px);
+}
+
 
 .integrante .rol {
     color: #aaffcc;
@@ -789,4 +802,25 @@ section:hover {
         height: 300px;
     }
 }
-  
+  #video {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.video-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border: 2px solid rgba(0, 204, 153, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
